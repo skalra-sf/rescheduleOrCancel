@@ -1,10 +1,10 @@
 <head></head>
 <body>
-    <script src="https://ace-aaa--travelsb.sandbox.my.site.com/prospects/lightning/lightning.out.js"></script>
+    <script src="https://ace-aaa--travelsb.sandbox.my.site.com/rescheduleorcancel/lightning/lightning.out.js"></script>
 
 <script>
 
-    var destination = 'Alaska';
+    var id = 'Alaska';
     $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
         function() {                  // Callback once framework and app load
             $Lightning.createComponent(
@@ -18,15 +18,15 @@
 
                      var inputVariables = [
                         {
-                            name: "Destination",
+                            name: "ServiceAppointmentId",
                             type: "String",
-                            value: destination
+                            value: id
                         }
                     ] 
-                    component.startFlow("Copy2_of_Inbound_New_Guest_Appointment_Travel_V2", inputVariables);
+                    component.startFlow("ACE_Travel_Inbound_Reschedule_OR_Cancel_Appointment", inputVariables);
                 }
             );
-        },    'https://ace-aaa--travelsb.sandbox.my.site.com/prospects'  // Site endpoint
+        },    'https://ace-aaa--travelsb.sandbox.my.site.com/rescheduleorcancel'  // Site endpoint
     );
 </script>
 <div id="lexcontainer">
@@ -34,6 +34,6 @@
 <p>try 6</p> -->
 <!-- <p> For Travel Sb</p> -->
 
-<p>Reschedule or Cancel 0</p>
+<p>Reschedule or Cancel 1</p>
 </div>
 </body>
