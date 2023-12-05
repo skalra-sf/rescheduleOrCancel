@@ -4,14 +4,16 @@
 <script>
 
     var id = 'Alaska';
+    console.log('Hi from callback 0');
     $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
         function() {                  // Callback once framework and app load
+            console.log('Hi from callback 1');
             $Lightning.createComponent(
                 "lightning:flow",    // top-level component of your app
                 {},    // attributes to set on the component when created
                 "lexcontainer",    // the DOM location to insert the component
                 function(component) {            // API name of the Flow
-                    console.log('Hi from callback');
+                    console.log('Hi from callback 2');
 
 
                      var inputVariables = [
@@ -32,6 +34,6 @@
 <p>try 6</p> -->
 <!-- <p> For Travel Sb</p> -->
 
-<p>Reschedule or Cancel 4</p>
+<p>Reschedule or Cancel 5</p>
 </div>
 </body>
